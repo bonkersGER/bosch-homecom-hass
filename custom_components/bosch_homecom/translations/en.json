@@ -28,7 +28,7 @@
         "error": {
             "no_devices_found": "No devices found",
             "cannot_connect": "Cannot connect",
-            "unknown": "Unkown error"
+            "unknown": "Unknown error"
         },
         "abort": {
             "already_configured": "Already configured",
