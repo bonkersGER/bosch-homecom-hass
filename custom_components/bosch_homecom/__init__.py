@@ -99,7 +99,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
             identifiers={(DOMAIN, c.device["deviceId"])},
             name=c.device["deviceId"],
             manufacturer="Bosch",
-            model=MODEL[c.device["deviceType"]],
+            model=MODEL.get(c.device["deviceType"], "Unknown"),
             sw_version=c.data.firmware,
         )
 

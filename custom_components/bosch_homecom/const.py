@@ -12,6 +12,7 @@ MANUFACTURER: Final = "Bosch"
 MODEL = {
     "rac": "Residential Air Conditioning",
     "k40": "Bosch boiler",
+    "k30": "Bosch boiler k30",
 }
 
 ATTR_NOTIFICATIONS = "notifications"
