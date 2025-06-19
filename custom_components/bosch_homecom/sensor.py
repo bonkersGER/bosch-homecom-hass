@@ -310,8 +310,8 @@ class BoschComSensorHc(BoschComSensorBase):
                     "heatCoolMode": heatCoolMode_value,
                 }
         return {
-            "currentSuWiMode": "unknonw",
-            "heatCoolMode": "unknonw",
+            "currentSuWiMode": "unknown",
+            "heatCoolMode": "unknown",
         }
 
 

@@ -92,7 +92,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
 
     device_registry = dr.async_get(hass)
 
-    # Create a new Device for each coorodinator to represent each module
+    # Create a new Device for each coordinator to represent each module
     for c in coordinators:
         device_registry.async_get_or_create(
             config_entry_id=entry.entry_id,
