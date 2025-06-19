@@ -1,4 +1,4 @@
-set_dhw_tempreture:
+set_dhw_temperature:
   name: Set DHW Temperature
   description: Set the temperature of dhw for a specific level
   target:
@@ -7,7 +7,7 @@ set_dhw_tempreture:
   fields:
     level:
       name: level
-      description: The tempreture level to set temperature for
+      description: The temperature level to set temperature for
       required: true
       default: "eco"
       example: "high"
@@ -19,7 +19,7 @@ set_dhw_tempreture:
             - "low"
     temperature:
       name: temperature
-      description: The tempreture to set to level of dhw circuit
+      description: The temperature to set to level of dhw circuit
       required: true
       example: 44.0
       selector:
