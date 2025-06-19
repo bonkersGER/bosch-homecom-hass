@@ -118,7 +118,7 @@ async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
 async def async_setup(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """Add custom action."""
 
-    async def set_dhw_tempreture_service(call: ServiceCall) -> None:
+    async def set_dhw_temperature_service(call: ServiceCall) -> None:
         """Service to change temperature."""
         for entity in call.data["entity_id"]:
             device_id = entity.split("_")[2]
@@ -143,7 +143,7 @@ async def async_setup(hass: HomeAssistant, entry: ConfigEntry) -> bool:
 
     # Register our service with Home Assistant.
     hass.services.async_register(
-        DOMAIN, "set_dhw_tempreture", set_dhw_tempreture_service
+        DOMAIN, "set_dhw_temperature", set_dhw_temperature_service
     )
 
     async def set_dhw_extrahot_water_service(call: ServiceCall) -> None:
