@@ -8,9 +8,7 @@ from homeassistant.core import HomeAssistant
 from homeassistant.const import CONF_PASSWORD, CONF_USERNAME
 from homecom_alt import BHCDevice
 from homeassistant.setup import async_setup_component
-from unittest.mock import MagicMock
 from collections.abc import Awaitable, Callable
-from custom_components.bosch_homecom.coordinator import BoschComModuleCoordinator
 from pytest_homeassistant_custom_component.common import MockConfigEntry
 import pytest
 import json
