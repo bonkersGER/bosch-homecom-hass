@@ -4,7 +4,7 @@ from homeassistant.core import HomeAssistant
 from homeassistant.helpers.device_registry import DeviceInfo
 from custom_components.bosch_homecom.coordinator import BoschComModuleCoordinatorRac
 from custom_components.bosch_homecom.const import DOMAIN, MANUFACTURER, DEFAULT_UPDATE_INTERVAL
-from homecom_alt import ApiError, InvalidSensorDataError, AuthFailedError, BHCDevice
+from homecom_alt import ApiError, InvalidSensorDataError, AuthFailedError, BHCDeviceRac
 from tenacity import RetryError
 from homeassistant.helpers.update_coordinator import UpdateFailed
 
@@ -52,7 +52,7 @@ def test_init_coordinator(hass, bhc, device, firmware):
 async def test_async_update_data_success(hass, bhc, device, firmware):
     """Test successful data update."""
     coordinator = BoschComModuleCoordinatorRac(hass, bhc, device, firmware)
-    bhc.async_update = AsyncMock(return_value=BHCDevice(
+    bhc.async_update = AsyncMock(return_value=BHCDeviceRac(
         device=device,
         firmware=firmware,
         notifications=[],
